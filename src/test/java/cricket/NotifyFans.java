@@ -9,10 +9,12 @@ public class NotifyFans {
     public void shouldNotifyViratFans() {
         ViratCenturyNotifier viratCenturyNotifier = new ViratCenturyNotifier();
         ViratFan anushka = new ViratFan("Anushka");
+        ViratFan krish = new ViratFan("Krish");
 
         viratCenturyNotifier.register(anushka);
+        viratCenturyNotifier.register(krish);
         viratCenturyNotifier.notifyFans();
-        Assert.assertEquals(viratCenturyNotifier.countFans(), 1);
+        Assert.assertEquals(viratCenturyNotifier.countFans(), 2);
     }
 
     @Test
